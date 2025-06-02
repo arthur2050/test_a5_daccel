@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: mysql://root:root@db:3306/todo?serverVersion=8.0
+      DATABASE_URL: mysql://root:root@db:3306/todo?serverVersion=mariadb-10.6
 
   nginx:
     image: nginx:stable-alpine
@@ -24,7 +24,7 @@ services:
       - app
 
   db:
-    image: mysql:8.0
+    image: mariadb
     container_name: todo_db
     restart: always
     environment:
