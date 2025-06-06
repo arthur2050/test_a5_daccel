@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "1289c504-4d1b-4a23-8f8d-4ddcac37239d",
+		"name": "Task API PHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42157501"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Change",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NDg5NjkwNjMsImV4cCI6MTc0ODk3MjY2Mywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidGVzdEBleGFtcGxlLmNvbSJ9.v5YwzL9xw7umlzHxNCB6lu7hpfgNmCinGREkrO3FD8OXkcCx1RUd1n1uMR3jTPhlmolOS7Q9OYtqI-9azRpK0jaKODxOdrN-b5SSGzlRn70_pE3te8GWXTFpmeWLRGgb3kR7ydEDeEmt7oTlsWfybeD3OgrH8E2QNzIZgo9ia5Ox1_5pzuPAaGCkCGGe4Cn0eXEEefVz_7Lx36Hm5PyR7fiTLidISdXWtp7NeT5bBhE9TH-FZQmE_pGuhtW75KgGXVXFbmdDgbA5zoMWPNuOykPeyFNN6R_5g_PWUlAkTGVmLHNz_DIUAXzMZ-cEjc3Dg6bCmbPG4TjX-3t9zKHjN8_a6Cd3WaMyq9f8HESORp-gOSRQlwzfoZqZWqqhiPHHHF0i5xcquHihyrg2pklMKkx8MTwqzHwGst1P-bGp7SuIg6-TAc_fCsshvamLxAkVR1HtsPFF6OZgUFZ20q50GC_UsVmh1JWfvQDE4hZR-BDNRtekEzmLJHTjg4UqqzTIq27tR1LMX2o-fF7yFHcT_R32Y-ZEFGZ1X2WecAZd4-3PEHFXGepDy05LxH13HoioajsK1HxFxnbloRvnnHox_HnUt6LAbwx_WX5XgEid6Za0V6-70wCFJmrvY_thr1zqDzSYNhFrJUFp6qls2A3L5EKHAsGOD0lREseCS9AwMZY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"strong_password\",\n  \"name\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
