@@ -1,5 +1,6 @@
 services:
   app:
+    user: "${UID}:${GID}"
     build:
       context: .
       dockerfile: docker/php/Dockerfile
@@ -10,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: mysql://root:root@db:3306/todo?serverVersion=mariadb-10.6
+      DATABASE_URL: mysql://root:root@db:3306/todo?serverVersion=mariadb-11.7.2
 
   nginx:
     image: nginx:stable-alpine
@@ -35,5 +36,14 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+  redis:
+    image: redis:alpine
+    container_name: todo_redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+
 volumes:
   mysql_data:
+  redis_data:

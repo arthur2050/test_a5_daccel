@@ -1,13 +1,13 @@
 FROM php:8.4-fpm
 
-# Системные зависимости
+# Системные зависимости и расширения PHP
 RUN apt-get update && apt-get install -y \
     zip unzip git curl libicu-dev libzip-dev libonig-dev libpng-dev libpq-dev libxml2-dev \
     && docker-php-ext-install intl pdo pdo_mysql zip opcache
 
-# Установка Xdebug
-RUN pecl install xdebug \
-    && docker-php-ext-enable xdebug
+# Установка Xdebug и Redis через PECL
+RUN pecl install xdebug redis \
+    && docker-php-ext-enable xdebug redis
 
 # Конфигурация Xdebug (для отладки в IDE)
 COPY ./docker/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
